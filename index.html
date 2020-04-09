@@ -10,8 +10,8 @@
   <title>Сочи Теплострой</title>
 </head>
 <body>
-  <div class="main-container container">
-    <header class='header'>
+  <header class='header'>
+    <div class="container header__container">
       <div class="logo">
         <img class='logo-img' src="./data/img/logo.jpg" alt="">
       </div>
@@ -19,11 +19,13 @@
         <div class="phone">+79000069939</div>
         <button class="ask-button">Задать вопрос</button>
       </div>
-    </header>
+    </div>
+  </header>
+  <div class="main-part">
     <div class="frame">
-      <img class="frame-bg-img" src="./data/img/frame-bg.jpg" alt="">
+      <div class="frame__back"></div>
  
-      <ul class="frame-content container">
+      <ul class="container frame__container">
         <h1>Проектирование и монтаж систем вентиляции и кондиционирования зданий и помещений</h1>
         <ul class="center-blocks">
           <li class="block left-block">
@@ -66,61 +68,65 @@
         </ul>
       </ul>
     </div>
-    <div class="main-part">
-      <section class="your-benefit">
-        <h2>Для вашей пользы мы</h2>
-        <ul class="row">
-          <li>
-            <img src="data/img/projecting.jpg">
-            <h3>предварительно<br>
-                проектируем<br>
-                систему</h3>
-          </li>
-          <li>
-            <img src="data/img/following.jpg">
-            <h3>неуклонно<br>
-                следуем<br>
-                проекту</h3>
-          </li>
-          <li>
-            <img src="data/img/checking.jpg">
-            <h3>полностью<br>
-                соблюдаем<br>
-                технологию</h3>
-          </li>
-          <li>
-            <img src="data/img/responsible.jpg">
-            <h3>проявляем<br>
-                гибкость и<br>
-                адаптивность</h3>
-          </li>
-        </ul>
-      </section>
-      <section class="benefit-everywhere">
-        <h2>Приносим пользу везде</h2>
-        <ul class="row">
-          <li>
-            <img src="data/img/appartments.jpg">
-            <h3>апартаменты,<br>
-                коттеджи и отели</h3>
-          </li>
-          <li>
-            <img src="data/img/cafe.jpg">
-            <h3>кафе, столовые<br>
-                и рестораны</h3>
-          </li>
-          <li>
-            <img src="data/img/spa.jpg">
-            <h3>S.P.A., бассейны,<br>
-                сауны и бани</h3>
-          </li>
-        </ul>
-      </section>
-      <section class="got-benefit">
-        <div class="bg-gradient">
-          <img class="clouds" src="data/img/clouds.png">
-          <img class="sun" src="data/img/sun.png">
-        </div>
+
+    <section class="container section__container your-benefit">
+      <h2>Для вашей пользы мы</h2>
+      <ul class="row container">
+        <li>
+          <img src="data/img/projecting.jpg">
+          <h3>предварительно<br>
+              проектируем<br>
+              систему</h3>
+        </li>
+        <li>
+          <img src="data/img/following.jpg">
+          <h3>неуклонно<br>
+              следуем<br>
+              проекту</h3>
+        </li>
+        <li>
+          <img src="data/img/checking.jpg">
+          <h3>полностью<br>
+              соблюдаем<br>
+              технологию</h3>
+        </li>
+        <li>
+          <img src="data/img/responsible.jpg">
+          <h3>проявляем<br>
+              гибкость и<br>
+              адаптивность</h3>
+        </li>
+      </ul>
+    </section>
+
+    <section class="container section__container benefit-everywhere">
+      <h2>Приносим пользу везде</h2>
+      <ul class="row">
+        <li>
+          <img src="data/img/appartments.jpg">
+          <h3>апартаменты,<br>
+              коттеджи и отели</h3>
+        </li>
+        <li>
+          <img src="data/img/cafe.jpg">
+          <h3>кафе, столовые<br>
+              и рестораны</h3>
+        </li>
+        <li>
+          <img src="data/img/spa.jpg">
+          <h3>S.P.A., бассейны,<br>
+              сауны и бани</h3>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section__container got-benefit">
+      <div class="bg-gradient">
+        <img class="clouds" src="data/img/clouds.png">
+        <img class="sun" src="data/img/sun.png">
+      </div>
+
+      <div class="container">
         <h2>Польза, которую Вы получаете</h2>
         <ul class="row">
           <li class="info-list">
@@ -146,7 +152,13 @@
           </li>
         </ul>
         <button class="ask-benefit">Получить пользу</button>
-      </section>
+      </div>
+      
+    </section>
+    <!-- <div class="main-part">
+      
+      
+      
       <section class="brought-benefit">
         <h2>Польза, принсённая нами</h2>
         <ul class="row">
@@ -207,7 +219,7 @@
         <p>© 2012—2019 | Все права защищены авторским правом</p>
         <p>developed by jarocki.art</p>
       </div>
-    </footer>
+    </footer> -->
   </div>
 
 </body>
