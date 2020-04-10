@@ -24,7 +24,7 @@ body {
     width: 100%;
 
     @media (min-width: 300px) { height: 75px; }
-
+    
     @media (min-width: 1024px) {
       height: 100px;
       position: fixed;
@@ -35,13 +35,17 @@ body {
     }
 
     .header__container {
+      @media (min-width: 576px) { padding: 0; }
+
+      padding: 0 20px;
+      box-sizing: border-box;
       height: 100%;
       display: flex;
       justify-content: space-between;
 
       .logo {
         height: 100%;
-        max-width: 50%;
+        max-width: 45%;
         
         .logo-img {
           padding-top: 2px;
@@ -64,12 +68,13 @@ body {
         }
   
         .ask-button {
-  
+          @media (min-width: 1024px) { padding: 8px 5px; }
+
           width: 100%;
           border: none;
           border-radius: 5px;
           margin-top: 10px;
-          padding: 8px 5px;
+          padding: 3px 5px;
           cursor: pointer;
           color: white;
           text-align: center;
@@ -320,7 +325,8 @@ body {
     }
 
     .section__container {
-      margin-bottom: 150px;
+      @media (min-width: 768px) {margin-bottom: 170px;}
+      margin-bottom: 70px;
 
       h2 {
         font-size: 1.6em;
@@ -358,10 +364,10 @@ body {
       }
 
       .row {
-        @media (max-width: 767px) {justify-content: space-around;}
+        @media (min-width: 768px) {justify-content: space-between;}
 
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         flex-wrap: wrap;
         align-items: center;
 
@@ -432,139 +438,144 @@ body {
       }
 
       &.got-benefit {
-        position: relative;
-        height: 600px;
+        width: 100%;
+        
+        .content {
+          position: relative;
 
-        h2 {
-          color: white;
-
-          &:before, &:after {
-            background-color: white;
+          h2 {
+            color: white;
+  
+            &:before, &:after {
+              background-color: white;
+            }
           }
-        }
 
-        .bg-gradient {
-          width: 100vw;
-          height: calc(100% - 50px);
-          position: absolute;
-          z-index: -1;
-          top: -50px;
-          left: 0;
-          overflow: hidden;
-
-          background: linear-gradient(116.82deg, rgba(255, 141, 64, 0.75) 15%, rgba(68, 123, 212, 0.25) 80%);
-          transform: skewY(-11.2deg);
-
-          .clouds {
-            width: 50vw;
+          .bg-gradient {
+            width: 100vw;
+            height: calc(100% + 50px);
             position: absolute;
-            right: 0;
-            bottom: 0;
-          }
-          
-          .sun {
-            height: 100%;
-            position: absolute;
-            top: 5%;
+            z-index: -1;
+            top: -50px;
             left: 0;
-            transform: skewY(11.2deg);
+            overflow: hidden;
+  
+            background: linear-gradient(116.82deg, rgba(255, 141, 64, 0.75) 15%, rgba(68, 123, 212, 0.25) 80%);
+            transform: skewY(-9deg);
+  
+            .clouds {
+              width: 50vw;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+            }
+            
+            .sun {
+              height: 100%;
+              position: absolute;
+              top: 5%;
+              left: 0;
+              transform: skewY(9deg);
+            }
           }
-        }
-
-        .row {
-          @media (max-width: 350px) {font-size: 0.9em;}
-          
-          justify-content: space-around;
-          height: 70%;
-          padding: 0 30px;
-          box-sizing: border-box;
-
-          .info-list {
-            h3 {
-              font-size: 1.4em;
-              color: rgb(75, 68, 62);
-            }
-
-            h4 {
-              font-size: 1.1em;
-              font-weight: normal;
-              padding: 15px 0;
-
-              &.help{
-                color: $green;
+  
+          .row {
+            @media (max-width: 350px) {font-size: 0.9em;}
+            
+            justify-content: space-around;
+            height: 80%;
+            padding: 0 30px;
+            box-sizing: border-box;
+  
+            .info-list {
+              h3 {
+                font-size: 1.4em;
+                color: rgb(75, 68, 62);
               }
-    
-              &.prevent {
-                color: $orange;
-              }
-            }
-
-            ul {
-
-              li {
-                padding: 2px;
+  
+              h4 {
                 font-size: 1.1em;
-
-                i {
-                  padding-right: 5px;
-
-                  &.fa-minus {
-                    color: $orange;
-                  }
-
-                  &.fa-plus {
-                    color: $green;
+                font-weight: normal;
+                padding: 15px 0;
+  
+                &.help{
+                  color: $green;
+                }
+      
+                &.prevent {
+                  color: $orange;
+                }
+              }
+  
+              ul {
+  
+                li {
+                  padding: 2px;
+                  font-size: 1.1em;
+  
+                  i {
+                    padding-right: 5px;
+  
+                    &.fa-minus {
+                      color: $orange;
+                    }
+  
+                    &.fa-plus {
+                      color: $green;
+                    }
                   }
                 }
               }
             }
+            
+            .book {
+              @media (max-width: 767px) {display: none;}
+  
+              height: 75%;
+            }
           }
-          
-          .book {
-            @media (max-width: 767px) {display: none;}
 
-            height: 75%;
-          }
         }
 
+
         .ask-benefit {
-          position: absolute;
-          left: 50%;
-          bottom: -30px;
-          transform: translate(-50%, 0);
-          text-align: center;
-          min-width: 200px;
-          width: 20%;
-          box-sizing: border-box;
-          border: none;
-          border-radius: 3px;
-          padding: 12px 0;
-          cursor: pointer;
-          font-size: 1em;
-          color: white;
-          font-weight: bold;
-          background: $orange;
-          box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
+          position: relative;
+          width: 100%;
+          height: 20px;
+          margin: 70px 0 0;
+          
+          button {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, 0);
+            text-align: center;
+            min-width: 200px;
+            width: 20%;
+            box-sizing: border-box;
+            border: none;
+            border-radius: 3px;
+            padding: 12px 0;
+            cursor: pointer;
+            font-size: 1em;
+            color: white;
+            font-weight: bold;
+            background: $orange;
+            box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.25);
 
-          &:active, &:focus {
-            outline: none;
-          }
+            &:active, &:focus {
+              outline: none;
+            }
 
-          &:active {
-            transform: translate(-50%, 3px);
-            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+            &:active {
+              transform: translate(-50%, 3px);
+              box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+            }
           }
         }
       }
     }
 
-      
-      //       
-      
-      //       
-      
-      //       
-      
       //       &.brought-benefit {
       
       //         ul {
