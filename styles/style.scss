@@ -190,7 +190,7 @@ body {
             &.right-block {
               @media (min-width: 300px) {
                 width: 300px;
-                padding: 5px;
+                padding: 5px 15px;
               }
               @media (min-width: 1024px) {
                 width: 400px;
@@ -333,7 +333,7 @@ body {
         color: $orange;
         text-align: center;
         position: relative;
-        padding-bottom: 80px;
+        padding: 0 20px 80px;
         
         &:before {
           position: absolute;
@@ -552,6 +552,7 @@ body {
             text-align: center;
             min-width: 200px;
             width: 20%;
+            max-width: 300px;
             box-sizing: border-box;
             border: none;
             border-radius: 3px;
@@ -574,32 +575,124 @@ body {
           }
         }
       }
+
+      &.brought-benefit {
+
+        ul {
+          width: 100%;
+          justify-content: space-around;
+  
+          li {
+            width: 30%;
+  
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+  
+      &.reviews {
+        margin-bottom: 50px;
+  
+        ul {
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+
+    .info-block {
+      display: flex;
+
+      img {
+        width: 25%;
+        height: 100%;
+      }
+
+      .info {
+        width: 70%;
+        margin-left: 5%;
+
+        ul {
+          padding-top: 45px;
+          display: flex;
+          justify-content: space-between;
+
+          li {
+            position: relative;
+            list-style-type: none;
+
+            &.requisites {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+            }
+
+            &.contacts {
+              p {
+                margin-bottom: 5px;
+              }
+
+              button {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                border: none;
+                border-radius: 5px;
+                margin-top: 5px;
+                padding: 7px 8px;
+                cursor: pointer;
+                font-size: 12px;
+                color: white;
+                font-weight: bold;
+                background: $orange;
+    
+                &:active, &:focus {
+                  outline: none;
+                }
+              }
+            }
+
+            h3 {
+              padding: 9px 0;
+              font-size: 17px;
+            }
+
+            p {
+              padding: 1px 0;
+              font-size: 15px;
+
+              i {
+                margin-right: 4px;
+                color: $orange;
+              }
+            }
+          }
+        }
+      }
     }
 
-      //       &.brought-benefit {
-      
-      //         ul {
-      //           width: 100%;
-      //           justify-content: space-around;
-      
-      //           li {
-      //             width: 30%;
-      
-      //             img {
-      //               width: 100%;
-      //             }
-      //           }
-      //         }
-      //       }
-      
-      //       &.reviews {
-      //         margin-bottom: 50px;
-      
-      //         ul {
-      //           justify-content: space-between;
-      //         }
-      //       }
-      //     }
+    .copyrights {
+      padding: 35px 0 10px;
+
+      p {
+        text-align: center;
+
+        &:first-child {
+          font-weight: 600;
+          font-size: 13px;
+        }
+
+        &:last-child {
+          margin-top: 10px;
+          font-size: 9px;
+        }
+      }
+    }
   }
 }
 

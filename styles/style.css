@@ -267,7 +267,7 @@ body .main-part .frame .frame__container .center-blocks .block.right-block {
 @media (min-width: 300px) {
   body .main-part .frame .frame__container .center-blocks .block.right-block {
     width: 300px;
-    padding: 5px;
+    padding: 5px 15px;
   }
 }
 
@@ -415,7 +415,7 @@ body .main-part .section__container h2 {
   color: #FF6600;
   text-align: center;
   position: relative;
-  padding-bottom: 80px;
+  padding: 0 20px 80px;
 }
 
 body .main-part .section__container h2:before {
@@ -670,6 +670,7 @@ body .main-part .section__container.got-benefit .ask-benefit button {
   text-align: center;
   min-width: 200px;
   width: 20%;
+  max-width: 300px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none;
@@ -693,6 +694,134 @@ body .main-part .section__container.got-benefit .ask-benefit button:active {
           transform: translate(-50%, 3px);
   -webkit-box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.25);
+}
+
+body .main-part .section__container.brought-benefit ul {
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .main-part .section__container.brought-benefit ul li {
+  width: 30%;
+}
+
+body .main-part .section__container.brought-benefit ul li img {
+  width: 100%;
+}
+
+body .main-part .section__container.reviews {
+  margin-bottom: 50px;
+}
+
+body .main-part .section__container.reviews ul {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .footer {
+  width: 100%;
+}
+
+body .footer .info-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .footer .info-block img {
+  width: 25%;
+  height: 100%;
+}
+
+body .footer .info-block .info {
+  width: 70%;
+  margin-left: 5%;
+}
+
+body .footer .info-block .info ul {
+  padding-top: 45px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .footer .info-block .info ul li {
+  position: relative;
+  list-style-type: none;
+}
+
+body .footer .info-block .info ul li.requisites {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .footer .info-block .info ul li.contacts p {
+  margin-bottom: 5px;
+}
+
+body .footer .info-block .info ul li.contacts button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 7px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+  background: #FF6600;
+}
+
+body .footer .info-block .info ul li.contacts button:active, body .footer .info-block .info ul li.contacts button:focus {
+  outline: none;
+}
+
+body .footer .info-block .info ul li h3 {
+  padding: 9px 0;
+  font-size: 17px;
+}
+
+body .footer .info-block .info ul li p {
+  padding: 1px 0;
+  font-size: 15px;
+}
+
+body .footer .info-block .info ul li p i {
+  margin-right: 4px;
+  color: #FF6600;
+}
+
+body .footer .copyrights {
+  padding: 35px 0 10px;
+}
+
+body .footer .copyrights p {
+  text-align: center;
+}
+
+body .footer .copyrights p:first-child {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+body .footer .copyrights p:last-child {
+  margin-top: 10px;
+  font-size: 9px;
 }
 
 @media (min-width: 300px) {
